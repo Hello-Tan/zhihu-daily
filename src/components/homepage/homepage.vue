@@ -155,6 +155,11 @@
       },
       _getNewsByDate (date) {
         api.getNewsByDate(date).then((res) => {
+          if (this.dates[0] === res.data.date) {
+            this.date.setTime(+this.date - DAY)
+            let date = formattingDate(this.date, 'yyyyMMdd')
+            return this._getNewsByDate(date)
+          }
           this.stories.push(res.data.stories)
           this.dates.push(res.data.date)
           this.showFlag = false

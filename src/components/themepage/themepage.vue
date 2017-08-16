@@ -93,7 +93,9 @@
     },
     activated () {        // 路由显示时
       this._listenerScroll()
-      document.body.scrollTop = this.scrollTop
+      this.$nextTick(() => {
+        document.body.scrollTop = this.scrollTop
+      })
     },
     deactivated () {        // 路由隐藏时
       this._stopListenerScroll()

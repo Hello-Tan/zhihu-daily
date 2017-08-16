@@ -35,7 +35,7 @@
         <loading></loading>
       </div>
       <iframe v-if="news.type > 1" v-show="showFlag"
-              :src="news.share_url" width="100%" height="100%" style="position:relative;top:1.35rem"></iframe>
+              :src="https" width="100%" height="100%" style="position:relative;top:1.35rem"></iframe>
       <keep-alive>
         <router-view
                   :newsInfo="newsInfo"
@@ -74,6 +74,14 @@
           return num > 999 ? `${(num / 1000).toFixed(1)}k` : num
         }
         return this.newsInfo.popularity === 0 ? '0' : '...'
+      },
+      https () {
+        if (this.news.share_url.indexOf('https') > -1) {
+          console.log('htttps')
+          return this.news.share_url
+        }
+        console.log('htttp')
+        return `https${this.news.share_url.substr(4)}`
       },
       ...mapGetters([
         'storiesId',

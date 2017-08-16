@@ -52,7 +52,6 @@
       },
       selectItem (item) {
         this.$router.push(`../../detail/${item.id}`)
-        this.setStoriesId(item.id)
         this.setStories(item)
         setTimeout(() => {
           this.setDetailShow(true)
@@ -60,7 +59,6 @@
       },
       ...mapMutations({
         'setDetailShow': 'SET_DETAIL_SHOW',
-        'setStoriesId': 'SET_STORIES_ID',
         'setStories': 'SET_STORIES_STATE',
         'setSidebarShow': 'SET_SIDEBAR_SHOW',
         'setFavoriteShow': 'SET_FAVORITE_SHOW'
@@ -79,6 +77,8 @@
     z-index:100
     top:0
     left:0
+    right: 0
+    bottom:0
     background:#fff
     .favorite-header
       display: flex
@@ -104,13 +104,19 @@
     .favorite-main
       position:relative
       top:1.333rem
+      width:100%
+      margin:0
+      padding: 0
       background: #fff
       ul
+        width:100%
         padding: 0
+        margin: 0
       .list
         padding:10px
         margin:10px
         min-height:1rem
+        width: auto
         display:flex
         flex-direction: row
         position: relative

@@ -1,19 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import StoriesDetail from 'components/stories-detail/stories-detail'
+import Comments from 'base/comments/comments'
 
 Vue.use(Router)
-
-const StoriesDetail = (resolve) => {
-  import('components/stories-detail/stories-detail').then((module) => {
-    resolve(module)
-  })
-}
-
-const Comments = (resolve) => {
-  import('base/comments/comments').then((module) => {
-    resolve(module)
-  })
-}
 
 const Editors = (resolve) => {
   import('base/editors/editors').then((module) => {
