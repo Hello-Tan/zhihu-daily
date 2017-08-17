@@ -21,7 +21,7 @@
 2. 使用手淘flexible配合rem布局
 3. 组件切换过渡效果与原生app一致 / 增加上拉加载文章的过渡效果
 4. 用localStorage存储收藏文章和夜间模式设置
-5. 用<meta name=referrer content=never>标签去除referrer信息，解决知乎图片防盗链问题
+5. 用\<meta name=referrer content=never\>标签去除referrer信息，解决知乎图片防盗链问题
 6. 对于知乎api返回"不支持阅读模式"的数据，采用iframe获取文章内容,但因此导致阅读此类文章夜间模式不起作用。
 
 ## Build Setup
