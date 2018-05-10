@@ -2,7 +2,7 @@
 
 > vue全家桶开发知乎日报webapp
 # 在线演示地址：
-  https://tanrenjie.github.io/zhihu-daily
+  https://hello-tan.github.io/zhihu-daily
   
     
 ### 技术栈
